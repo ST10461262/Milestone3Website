@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating Fees</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    
+    <!-- THIS IS THE NAVIGATION SECTION OF THE WEB-PAGE -->
+    <section id="header">
+        <header>
+			<div id="logo">
+				<img src="Images/Logo.png" alt="Empowering the Nation logo">
+				<h2>Empowering the Nation</h2>
+			</div >
+            <nav>
+                <ul>
+                    <li><a href="Milestone 3 - Home Page.html">Home</a></li>
+                    <li><a href="Milestone 3 - Six Months Courses Page.html">Six Months Courses</a></li>
+                    <li><a href="Milestone 3 - Six Weeks Courses Page.html">Six Weeks Courses</a></li>
+                    <li><a href="Milestone 3 - Calculating Fees Page.html">Calculate Fees</a></li>
+                    <li><a href="Milestone 3 - Contact Details Page.html">Contact Details</a></li>
+                    <li><a href="Milestone 3 - About Us Page.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <section>
+		<div>
+			<h1 class="ani">Calculating Fees</h1>
+		</div>
+	</section>
+    <!-- THIS IS THE FORM SECTION OF THE WEB-PAGE -->
+    <section id="form ani">
+        <form id="userForm" class="ani">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" id="phone-number" name="phone-number" required>
+            <br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </form>
+    </section>
+
+    <div class="flex-container ani">
+        <!-- THIS IS THE CHECKBOX FOR SIX-MONTHS COURSES -->
+        <section id="checkbox-six-months" class="course-section">
+            <h3>Six-Months Courses:</h3>
+            <form id="sixMonthsForm">
+                <input type="checkbox" id="first-aid" name="first-aid" value="1500">
+                <label for="first-aid">First Aid: R1 500</label><br>
+                <input type="checkbox" id="sewing" name="sewing" value="1500">
+                <label for="sewing">Sewing: R1 500</label><br>
+                <input type="checkbox" id="landscaping" name="landscaping" value="1500">
+                <label for="landscaping">Landscaping: R1 500</label><br>
+                <input type="checkbox" id="life-skills" name="life-skills" value="1500">
+                <label for="life-skills">Life Skills: R1 500</label><br>
+            </form>
+        </section>
+
+        <!-- THIS IS THE CHECKBOX FOR SIX-WEEKS COURSES -->
+        <section id="checkbox-six-weeks" class="course-section">
+            <h3>Six-Weeks Courses:</h3>
+            <form id="sixWeeksForm">
+                <input type="checkbox" id="child-minding" name="child-minding" value="750">
+                <label for="child-minding">Child Minding: R750</label><br>
+                <input type="checkbox" id="cooking" name="cooking" value="750">
+                <label for="cooking">Cooking: R750</label><br>
+                <input type="checkbox" id="garden-maintenance" name="garden-maintenance" value="750">
+                <label for="garden-maintenance">Garden Maintenance: R750</label><br>
+            </form>
+        </section>
+    </div>
+
+    <!-- BUTTON TO CALCULATE FEES -->
+    <button class="calculate-btn" onclick="printInvoice()">Calculate</button>
+
+    <!-- SECTION TO DISPLAY THE RESULTS -->
+    <section id="result">
+        <div class="result" id="result"></div>
+        <!-- ERROR MESSAGE CONTAINER -->
+        <div id="error-message" style="color: red;"></div>
+    </section>
+
+    <!-- THIS IS THE FOOTER OF THE WEB-PAGE -->
+    <section id="footer">
+        <footer>
+            <p>
+                <img src="Images/Copyright Logo.png" alt="Copyright Logo">
+                2018 Empowering the Nation
+            </p>
+        </footer>
+    </section>
+
+    <script>
+        function storeUserInfo() {
+            const name = document.getElementById('name').value;
+            const phoneNumber = document.getElementById('phone-number').value;
+            const email = document.getElementById('email').value;
+
+            sessionStorage.setItem('userName', name);
+            sessionStorage.setItem('userPhoneNumber', phoneNumber);
+            sessionStorage.setItem('userEmail', email);
+        }
+
+        function calculateFees() {
+            const sixMonthsForm = document.getElementById('sixMonthsForm');
+            const sixWeeksForm = document.getElementById('sixWeeksForm');
+            let totalFees = 0;
+            let courseCount = 0;
+            let selectedCourses = [];
+
+            // CALCULATE FEES FOR SIX MONTHS COURSE
+            const sixMonthsCheckboxes = sixMonthsForm.querySelectorAll('input[type="checkbox"]:checked');
+            sixMonthsCheckboxes.forEach(checkbox => {
+                totalFees += parseInt(checkbox.value);
+                courseCount++;
+                selectedCourses.push(checkbox.parentNode.textContent.trim());
+            });
+
+            // CALCULATE FEES FOR SIX WEEKS COURSE
+            const sixWeeksCheckboxes = sixWeeksForm.querySelectorAll('input[type="checkbox"]:checked');
+            sixWeeksCheckboxes.forEach(checkbox => {
+                totalFees += parseInt(checkbox.value);
+                courseCount++;
+                selectedCourses.push(checkbox.parentNode.textContent.trim());
+            });
+
+            // CALCULATE DISCOUNT
+            let discount = 0;
+            if (courseCount === 2) {
+                discount = 0.05; // 5% discount
+            } else if (courseCount === 3) {
+                discount = 0.10; // 10% discount
+            } else if (courseCount > 3) {
+                discount = 0.15; // 15% discount
+            }
+
+            // APPLY DISCOUNT
+            totalFees -= totalFees * discount;
+
+            // STORE THE RESULT IN SESSION STORAGE TO ACCESS IT ON THE NEW PAGE
+            sessionStorage.setItem('totalFees', totalFees.toFixed(2));
+            sessionStorage.setItem('discount', (discount * 100).toFixed(0));
+            sessionStorage.setItem('selectedCourses', JSON.stringify(selectedCourses));
+
+            // DISPLAY THE RESULT
+            document.getElementById('result').innerText = `Total Fees: R${totalFees.toFixed(2)} (Discount: ${discount * 100}%)`;
+        }
+
+        function printInvoice() {
+            const sixMonthsForm = document.getElementById('sixMonthsForm');
+            const sixWeeksForm = document.getElementById('sixWeeksForm');
+            const errorMessageDiv = document.getElementById('error-message');
+
+            // CHECK IF ANY CHECKBOXES ARE SELECTED
+            const sixMonthsSelected = sixMonthsForm.querySelectorAll('input[type="checkbox"]:checked').length > 0;
+            const sixWeeksSelected = sixWeeksForm.querySelectorAll('input[type="checkbox"]:checked').length > 0;
+
+            if (!sixMonthsSelected && !sixWeeksSelected) {
+                // IF NO COURSES ARE SELECTED THEN SHOW ERROR MESSAGE
+                errorMessageDiv.innerText = "Please select at least one course.";
+            } else {
+                // IF COURSES ARE SELECTED THEN CLEAR ERROR MESSAGE AND PROCEED
+                errorMessageDiv.innerText = "";
+                calculateFees();
+                storeUserInfo();
+                window.location.href = 'Milestone 3 - Invoice Page.html';
+            }
+        }
+    </script>
+</body>
+</html>

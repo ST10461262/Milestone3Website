@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six Weeks Courses</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    
+    <section id="header">
+        <header>
+            <div id="logo">
+                <img src="Images/Logo.png" alt="Empowering the Nation logo">
+                <h2>Empowering the Nation</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Milestone 3 - Home Page.html">Home</a></li>
+                    <li><a href="Milestone 3 - Six Months Courses Page.html">Six Months Courses</a></li>
+                    <li><a href="Milestone 3 - Six Weeks Courses Page.html">Six Weeks Courses</a></li>
+                    <li><a href="Milestone 3 - Calculating Fees Page.html">Calculate Fees</a></li>
+                    <li><a href="Milestone 3 - Contact Details Page.html">Contact Details</a></li>
+                    <li><a href="Milestone 3 - About Us Page.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+	<section id="heading">
+        <h1>Six-Week Courses</h1>
+    </section>
+    
+    <h1 class="ani">These are the Six Week Courses available at Empowering the Nation:</h1>
+
+    <div class="courses-container ani" style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+        <figure>
+            <img src="Images/Child Minding.png" alt="Child Minding" style="max-width: 150px;">
+            <figcaption>Child Minding</figcaption>
+        </figure>
+        <figure>
+            <img src="Images/Cooking.jpeg" alt="Cooking" style="max-width: 150px;">
+            <figcaption>Cooking</figcaption>
+        </figure>
+        <figure>
+            <img src="Images/Garden Maintenance.jpg" alt="Garden Maintenance" style="max-width: 150px;">
+            <figcaption>Garden Maintenance</figcaption>
+        </figure>
+    </div>
+
+    <p>For more details on the Six Week Courses, please select one below.</p>
+
+    <div style="display: flex; align-items: center;">
+        <label>Select Six-Week Course:</label>
+        <select id="dropdown" style="margin-left: 10px;" onchange="window.location.href=this.value;">
+            <option value="">Select Option</option>
+            <option value="Milestone 3 - Child Minding Page.html">Child Minding</option>
+            <option value="Milestone 3 - Cooking Page.html">Cooking</option>
+            <option value="Milestone 3 - Garden Maintenance Page.html">Garden Maintenance</option>
+        </select>
+    </div>
+
+    <section id = "footer">
+		<footer>
+			<h3> Contact Info</h3>
+			<p>Email: info@WelcomeToEmpoweringTheNation.com</p>
+			<p>Phone: +27( 82 ) 154 5678</p>
+			<p>
+				© 2018 Empowering the Nation
+			</p>
+		</footer>
+	</section>
+</body>
+</html>

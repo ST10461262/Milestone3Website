@@ -1,0 +1,518 @@
+header {
+	background: #FFFFFF;
+	color: #000000;
+	padding: 1.5rem 0;
+	margin: 0.5;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 5;
+	padding: 5;
+	background-color:#00008B;
+	color: #FFFFFF;
+}
+
+header ul {
+	display: flex; 
+	justify-content: space-around;
+	list-style-type: none; 
+	padding: 0; 
+	margin: 0;
+}
+
+footer {
+	background: #FFFFFF;
+	color: #000000;
+	padding: 1.5rem 0;
+	margin: 0.5;
+	text-align: center;
+}
+
+li {
+	margin: 0 1rem; 
+}
+
+a {
+	text-decoration: none;
+    	color: #000000; 
+}
+
+
+img {
+	height: 20%;
+	width: auto;
+	padding: 5;
+}
+
+.flex-container {	
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.form-section {
+	margin: 1rem;
+	padding: 1rem;
+	border: 1px solid #000; 
+	width: 45%; 
+        }
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.course-section {
+	width: 48%; 
+	margin-bottom: 20px;
+}
+
+h3 {
+	text-align: center;
+}
+
+form {
+	margin-top: 1rem;
+	margin: 1rem;
+	padding: 1rem;
+	border: 1px solid #000; 
+	width: 45%; 
+}
+
+.calculate-btn {
+	margin-top: 1rem;
+	width: 100%;
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: white; 
+	color: black;
+	border: none; 
+	border-radius: 5px; 
+	cursor: pointer;
+}
+
+.calculate-btn:hover {
+	background-color: black; 
+	color: white;
+}
+
+.invoice-btn {
+	margin-top: 1rem;
+	width: 100%;
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: white; 
+	color: black; 
+	border: none; 
+	border-radius: 5px; 
+	cursor: pointer; 
+}
+
+.invoice-btn:hover {
+	background-color: black; 
+	color: white;
+}
+
+footer img {
+	height: 3%;
+	width: auto;
+}
+
+#six-month-courses {
+	display: flex;
+	justify-content: space-between; 
+	flex-wrap: wrap; 
+	gap: 20px; 
+}
+
+#six-month-courses figure {
+	margin: 0;
+	text-align: center; 
+	width: 20%; 
+}
+
+#six-month-courses img {
+	width: 100%; 
+	height: auto;
+}
+
+#six-month-courses {
+	display: flex;
+   	justify-content: space-around; 
+   	flex-wrap: wrap; 
+	gap: 20px; 
+}
+
+#six-month-courses figure {
+	margin: 0;
+	text-align: center; 
+}
+
+#six-month-courses img {
+	width: 150px; 
+	height: auto;
+}
+
+.result {
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.map-container {
+	width: 100%;
+	height: 400px;
+	margin: 20px 0;
+}
+/* Logo styles */
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+#logo h2 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Nav Bar styles */
+/* Header Styles */
+header {
+    background-color: #f8f8f8;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+#logo h2 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width for nav */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Use flexbox for links */
+    margin-left: auto; /* Push links to the right */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    margin-left: 20px; /* Space between links */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Default link color */
+    font-weight: bold; /* Make links bold */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+.work{
+	margin-top: 10%;
+	max-width: 600px;
+
+}
+.work h1{
+	font-size: 70px;
+	
+}
+.work p{
+	margin: 10px 0 30px;
+	color: #ffffff;
+}
+.Images{
+	width: 420px;
+	height: 420px;
+	position: absolute;
+	bottom: 0;
+	left: 60%;
+	border-radius: 20px;
+    
+	
+}
+.overall{
+	
+	position: relative;
+}
+
+.ani {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards; /* Added 's' for seconds */
+}
+
+@keyframes moveup { /* Changed 'm' to 'moveup' to match */
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Changed to 0 to move up */
+    }
+}
+.Image{
+	width: 420px;
+	height: 400px;
+	position: absolute;
+	bottom: 0;
+	left: 60%;
+	border-radius: 20px;
+}
+#form {
+    background: #014b9b;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Checkbox Section */
+.course-section {
+    background: #014b9b;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Calculate Button */
+.calculate-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px 0;
+}
+
+.calculate-btn:hover {
+    background-color: #219653;
+}
+
+/* Result Section */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Error Message */
+#error-message {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .calculate-btn {
+        font-size: 14px;
+    }
+}
+#courses {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+figure {
+    margin: 10px;
+}
+
+figure img {
+    max-width: 350px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+}
+
+#dropdown-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#dropdown {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.sectionsd {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgb(65, 49, 243);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* Map Container */
+.map-container {
+    margin: 20px 0;
+    height: 300px; /* Adjust height as needed */
+}
+
+.courses-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap; /* Allows wrapping for smaller screens */
+	margin: 20px 0;
+}
+
+.courses-container figure {
+	margin: 10px;
+	text-align: center;
+	flex: 1 1 calc(25% - 20px); /* Responsive layout */
+}
+
+.courses-container img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+.nice {
+    display: flex;
+    flex-direction: column; /* Arranges items in a column */
+    align-items: center; /* Centers the items horizontally */
+    gap: 20px; /* Space between items */
+}
+.contact-item {
+    display: flex;
+    flex-direction: column; /* Arranges image and text in a column */
+    align-items: center; /* Centers items horizontally within the contact item */
+    max-width: 300px; /* Limits the width of each contact item */
+}
+
+.contact-item img {
+    margin-bottom: 10px; /* Adds space below the image */
+    width: 40px; /* Sets a consistent width for the images */
+    height: 40px; /* Sets a consistent height for the images */
+}
+.Imagez{
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	bottom: 0;
+	left: 60%;
+	border-radius: 20px;
+}
+/* Button Styles */
+.btn {
+    background-color: #b1b70d; /* Green background */
+    color: white;              /* White text */
+    border: none;              /* No border */
+    border-radius: 5px;       /* Rounded corners */
+    padding: 10px 20px;       /* Padding for size */
+    font-size: 1rem;          /* Font size */
+    font-weight: 700;          /* Bold text */
+    cursor: pointer;           /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background change */
+    text-decoration: none;     /* No underline */
+}
+
+.btn:hover {
+    background-color: #929204; /* Darker green on hover */
+}
+#total {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e0f7fa;
+    border: 1px solid #80deea;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: #00796b;
+}
+#course-list {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+#invoice {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000000;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+#user-info, #invoice-details {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #8c8a8a;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+}
+.nice {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #036f7b;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
